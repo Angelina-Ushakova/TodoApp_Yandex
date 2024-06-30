@@ -17,6 +17,7 @@ struct TodoItem: Identifiable {
     /// Дата изменения задачи (опционально)
     var modificationDate: Date?
     
+    
     /// Инициализатор для создания нового элемента задачи
     init(id: String = UUID().uuidString, text: String, importance: Importance = .normal, deadline: Date? = nil, isDone: Bool = false, creationDate: Date = Date(), modificationDate: Date? = nil) {
         self.id = id

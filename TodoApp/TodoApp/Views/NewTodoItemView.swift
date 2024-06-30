@@ -2,7 +2,7 @@ import SwiftUI
 
 struct NewTodoItemView: View {
     @Environment(\.presentationMode) var presentationMode
-    @ObservedObject var viewModel: TodoItemViewModel
+    @StateObject var viewModel: TodoItemViewModel
     @State private var showingDatePicker = false
     var onSave: () -> Void
     
@@ -13,21 +13,26 @@ struct NewTodoItemView: View {
                     ZStack(alignment: .topLeading) {
                         if viewModel.todoItem.text.isEmpty {
                             Text("Что надо сделать?")
-                                .foregroundColor(.gray)
+                                .foregroundColor(Color("LabelSecondary"))
+                                .font(.custom("SF Pro Text", size: 17))
                                 .padding(.vertical, 12)
                                 .padding(.horizontal, 4)
                         }
                         TextEditor(text: $viewModel.todoItem.text)
-                            .font(AppTextStyles.body)
+                            .font(.custom("SF Pro Text", size: 17))
                             .frame(minHeight: 100, alignment: .topLeading)
+                        Rectangle()
+                            .fill(viewModel.selectedColor)
+                            .frame(width: 5)
+                            .padding(.leading, -10)
                     }
                 }
-                .listRowBackground(AppColors.Back.secondary)
+                .listRowBackground(Color("BackSecondary"))
                 
                 Section {
                     HStack {
                         Text("Важность")
-                            .font(AppTextStyles.body)
+                            .font(.custom("SF Pro Text", size: 17))
                             .frame(maxWidth: .infinity, alignment: .leading)
                         Picker("Важность", selection: $viewModel.todoItem.importance) {
                             Image("low_importance")
@@ -50,7 +55,7 @@ struct NewTodoItemView: View {
                         set: { self.viewModel.todoItem.deadline = $0 ? Date().addingTimeInterval(86400) : nil }
                     )) {
                         Text("Сделать до")
-                            .font(AppTextStyles.body)
+                            .font(.custom("SF Pro Text", size: 17))
                     }
                     if viewModel.todoItem.deadline != nil {
                         withAnimation {
@@ -68,25 +73,35 @@ struct NewTodoItemView: View {
                         }
                     }
                 }
-                .listRowBackground(AppColors.Back.secondary)
+                .listRowBackground(Color("BackSecondary"))
                 
                 Section {
+                    HStack {
+                        Text("Цвет")
+                            .font(.custom("SF Pro Text", size: 17))
+                        Spacer()
+                        ColorPicker("", selection: $viewModel.selectedColor)
+                            .labelsHidden()
+                            .frame(width: 20, height: 20)
+                    }
+                    .listRowBackground(Color("BackSecondary"))
+                    
                     Button(action: {
                         self.viewModel.delete()
                         self.presentationMode.wrappedValue.dismiss()
                         onSave()
                     }) {
                         Text("Удалить")
-                            .font(AppTextStyles.body)
-                            .foregroundColor(Color.red)
+                            .font(.custom("SF Pro Text", size: 17))
+                            .foregroundColor(Color("Red"))
                             .frame(maxWidth: .infinity)
                             .cornerRadius(8)
                     }
                     .frame(maxWidth: .infinity, alignment: .center)
                 }
-                .listRowBackground(AppColors.Back.secondary)
+                .listRowBackground(Color("BackSecondary"))
             }
-            .background(AppColors.Back.primary.edgesIgnoringSafeArea(.all)) // Используем AppColors для фона
+            .background(Color("BackPrimary").edgesIgnoringSafeArea(.all))
             .navigationBarTitle("Дело", displayMode: .inline)
             .navigationBarItems(
                 leading: Button("Отменить") {
@@ -98,7 +113,11 @@ struct NewTodoItemView: View {
                     onSave()
                 }
             )
+            .onAppear {
+                self.viewModel.selectedColor = Color(hex: UserDefaults.standard.string(forKey: "\(self.viewModel.todoItem.id)_color") ?? "#0000FF")
+            }
         }
+        .accentColor(Color("Blue")) // Устанавливаем основной цвет
     }
 }
 
