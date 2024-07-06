@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		8428F43B2C308BC8001C0DEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8428F43A2C308BC8001C0DEE /* Assets.xcassets */; };
 		8428F43D2C308E7D001C0DEE /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428F43C2C308E7D001C0DEE /* UIColor.swift */; };
-		847BBFB02C2664E100C66E07 /* TodoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847BBFAF2C2664E100C66E07 /* TodoAppApp.swift */; };
+		847BBFB02C2664E100C66E07 /* TodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847BBFAF2C2664E100C66E07 /* TodoApp.swift */; };
 		847BBFB22C2664E100C66E07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847BBFB12C2664E100C66E07 /* ContentView.swift */; };
 		847BBFB72C2664E300C66E07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847BBFB62C2664E300C66E07 /* Preview Assets.xcassets */; };
 		847BBFE22C26667F00C66E07 /* TodoItem+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847BBFE02C26667F00C66E07 /* TodoItem+JSON.swift */; };
@@ -20,6 +20,10 @@
 		8486B3322C2FB1E20017CC6D /* AppTextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486B3312C2FB1E20017CC6D /* AppTextStyles.swift */; };
 		8486B3362C2FBEB00017CC6D /* TodoItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486B3352C2FBEB00017CC6D /* TodoItemViewModel.swift */; };
 		8486B3382C2FC1C50017CC6D /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486B3372C2FC1C50017CC6D /* TodoListView.swift */; };
+		84DE11922C38D3560068E468 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE11912C38D3560068E468 /* CalendarViewController.swift */; };
+		84DE11952C38D7700068E468 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 84DE11942C38D7700068E468 /* FSCalendar */; };
+		84DE11972C38DC5F0068E468 /* TodoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE11962C38DC5F0068E468 /* TodoItemCell.swift */; };
+		84DE11992C38DC990068E468 /* CalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE11982C38DC990068E468 /* CalendarHeaderView.swift */; };
 		84F083732C2F80A5002BCA56 /* NewTodoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F083722C2F80A5002BCA56 /* NewTodoItemView.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +41,7 @@
 		8428F43A2C308BC8001C0DEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		8428F43C2C308E7D001C0DEE /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		847BBFAC2C2664E100C66E07 /* TodoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		847BBFAF2C2664E100C66E07 /* TodoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAppApp.swift; sourceTree = "<group>"; };
+		847BBFAF2C2664E100C66E07 /* TodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoApp.swift; sourceTree = "<group>"; };
 		847BBFB12C2664E100C66E07 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		847BBFB62C2664E300C66E07 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		847BBFBC2C2664E400C66E07 /* TodoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +54,9 @@
 		8486B3312C2FB1E20017CC6D /* AppTextStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextStyles.swift; sourceTree = "<group>"; };
 		8486B3352C2FBEB00017CC6D /* TodoItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemViewModel.swift; sourceTree = "<group>"; };
 		8486B3372C2FC1C50017CC6D /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
+		84DE11912C38D3560068E468 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		84DE11962C38DC5F0068E468 /* TodoItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemCell.swift; sourceTree = "<group>"; };
+		84DE11982C38DC990068E468 /* CalendarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeaderView.swift; sourceTree = "<group>"; };
 		84F083722C2F80A5002BCA56 /* NewTodoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84DE11952C38D7700068E468 /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +109,7 @@
 		847BBFAE2C2664E100C66E07 /* TodoApp */ = {
 			isa = PBXGroup;
 			children = (
+				84DE118C2C38BED40068E468 /* CalendarView */,
 				8428F4402C30B4B1001C0DEE /* Style */,
 				8428F43A2C308BC8001C0DEE /* Assets.xcassets */,
 				84F083712C2F7E94002BCA56 /* Views */,
@@ -155,12 +164,22 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		84DE118C2C38BED40068E468 /* CalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				84DE11912C38D3560068E468 /* CalendarViewController.swift */,
+				84DE11962C38DC5F0068E468 /* TodoItemCell.swift */,
+				84DE11982C38DC990068E468 /* CalendarHeaderView.swift */,
+			);
+			path = CalendarView;
+			sourceTree = "<group>";
+		};
 		84F083712C2F7E94002BCA56 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				8486B3372C2FC1C50017CC6D /* TodoListView.swift */,
 				847BBFB12C2664E100C66E07 /* ContentView.swift */,
-				847BBFAF2C2664E100C66E07 /* TodoAppApp.swift */,
+				847BBFAF2C2664E100C66E07 /* TodoApp.swift */,
 				84F083722C2F80A5002BCA56 /* NewTodoItemView.swift */,
 			);
 			path = Views;
@@ -182,6 +201,9 @@
 			dependencies = (
 			);
 			name = TodoApp;
+			packageProductDependencies = (
+				84DE11942C38D7700068E468 /* FSCalendar */,
+			);
 			productName = TodoApp;
 			productReference = 847BBFAC2C2664E100C66E07 /* TodoApp.app */;
 			productType = "com.apple.product-type.application";
@@ -233,6 +255,9 @@
 				Base,
 			);
 			mainGroup = 847BBFA32C2664E000C66E07;
+			packageReferences = (
+				84DE11932C38D7700068E468 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+			);
 			productRefGroup = 847BBFAD2C2664E100C66E07 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -267,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84DE11922C38D3560068E468 /* CalendarViewController.swift in Sources */,
 				847BBFE62C26669D00C66E07 /* TodoItem.swift in Sources */,
 				8428F43D2C308E7D001C0DEE /* UIColor.swift in Sources */,
 				847BBFB22C2664E100C66E07 /* ContentView.swift in Sources */,
@@ -274,9 +300,11 @@
 				8486B3362C2FBEB00017CC6D /* TodoItemViewModel.swift in Sources */,
 				8486B3382C2FC1C50017CC6D /* TodoListView.swift in Sources */,
 				8486B3322C2FB1E20017CC6D /* AppTextStyles.swift in Sources */,
-				847BBFB02C2664E100C66E07 /* TodoAppApp.swift in Sources */,
+				847BBFB02C2664E100C66E07 /* TodoApp.swift in Sources */,
+				84DE11992C38DC990068E468 /* CalendarHeaderView.swift in Sources */,
 				847BBFE92C2666C000C66E07 /* FileCache.swift in Sources */,
 				84F083732C2F80A5002BCA56 /* NewTodoItemView.swift in Sources */,
+				84DE11972C38DC5F0068E468 /* TodoItemCell.swift in Sources */,
 				847BBFE22C26667F00C66E07 /* TodoItem+JSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,6 +581,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		84DE11932C38D7700068E468 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		84DE11942C38D7700068E468 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84DE11932C38D7700068E468 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 847BBFA42C2664E000C66E07 /* Project object */;
 }
