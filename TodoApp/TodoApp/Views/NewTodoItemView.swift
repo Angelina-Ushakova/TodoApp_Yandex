@@ -35,15 +35,16 @@ struct NewTodoItemView: View {
                             .font(.custom("SF Pro Text", size: 17))
                             .frame(maxWidth: .infinity, alignment: .leading)
                         Picker("Важность", selection: $viewModel.todoItem.importance) {
-                            Image("low_importance")
+                            Image(systemName: "arrow.down")
                                 .resizable()
                                 .frame(width: 18, height: 18)
                                 .tag(Importance.low)
                             Text("нет")
                                 .tag(Importance.normal)
-                            Image("high_importance")
+                            Image(systemName: "exclamationmark.2")
                                 .resizable()
                                 .frame(width: 18, height: 18)
+                                .foregroundColor(.red)
                                 .tag(Importance.high)
                         }
                         .pickerStyle(SegmentedPickerStyle())

@@ -1,7 +1,7 @@
 import Foundation
 
 /// Структура, представляющая элемент задачи (TodoItem)
-struct TodoItem: Identifiable {
+struct TodoItem: Identifiable, Codable {
     /// Уникальный идентификатор задачи
     let id: String
     /// Текст задачи
