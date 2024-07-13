@@ -51,6 +51,8 @@ class CalendarViewController: UIViewController {
 
         addButton.setImage(UIImage(systemName: "plus.circle.fill"), for: .normal)
         addButton.tintColor = .systemBlue
+        addButton.contentVerticalAlignment = .fill
+        addButton.contentHorizontalAlignment = .fill
         addButton.addTarget(self, action: #selector(addNewTodoItem), for: .touchUpInside)
 
         // Передаем todoItems в календарный заголовок
