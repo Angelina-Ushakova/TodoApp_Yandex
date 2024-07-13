@@ -1,0 +1,11 @@
+platform :ios, '11.0'
+
+target 'TodoApp' do
+  use_frameworks!
+  pod 'SwiftLint'
+end
+
+target 'TodoAppTests' do
+  inherit! :search_paths
+  # Pods for testing
+end
