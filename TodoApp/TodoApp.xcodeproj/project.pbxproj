@@ -28,6 +28,7 @@
 		84DE11992C38DC990068E468 /* CalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE11982C38DC990068E468 /* CalendarHeaderView.swift */; };
 		84F083732C2F80A5002BCA56 /* NewTodoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F083722C2F80A5002BCA56 /* NewTodoItemView.swift */; };
 		84FD9A302C420DA7001209BA /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 84FD9A2F2C420DA7001209BA /* CocoaLumberjackSwift */; };
+		84FD9A362C4216F8001209BA /* URLSession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD9A352C4216F7001209BA /* URLSession+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		84DE11962C38DC5F0068E468 /* TodoItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemCell.swift; sourceTree = "<group>"; };
 		84DE11982C38DC990068E468 /* CalendarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeaderView.swift; sourceTree = "<group>"; };
 		84F083722C2F80A5002BCA56 /* NewTodoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoItemView.swift; sourceTree = "<group>"; };
+		84FD9A352C4216F7001209BA /* URLSession+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
 		8DD92079A26C61A3E8FFCFBC /* Pods_TodoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E0724C0CB6B0A9246E88C7B /* Pods-TodoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoApp.release.xcconfig"; path = "Target Support Files/Pods-TodoApp/Pods-TodoApp.release.xcconfig"; sourceTree = "<group>"; };
 		9CC1A8C6FA80761CD6F312F6 /* libPods-TodoAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TodoAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				847BBFE82C2666C000C66E07 /* FileCache.swift */,
+				84FD9A352C4216F7001209BA /* URLSession+Extension.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				847BBFB02C2664E100C66E07 /* TodoApp.swift in Sources */,
 				84DE11992C38DC990068E468 /* CalendarHeaderView.swift in Sources */,
 				847BBFE92C2666C000C66E07 /* FileCache.swift in Sources */,
+				84FD9A362C4216F8001209BA /* URLSession+Extension.swift in Sources */,
 				84F083732C2F80A5002BCA56 /* NewTodoItemView.swift in Sources */,
 				84DE11972C38DC5F0068E468 /* TodoItemCell.swift in Sources */,
 				847BBFE22C26667F00C66E07 /* TodoItem+JSON.swift in Sources */,
