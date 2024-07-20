@@ -22,6 +22,10 @@
 		8486B3322C2FB1E20017CC6D /* AppTextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486B3312C2FB1E20017CC6D /* AppTextStyles.swift */; };
 		8486B3362C2FBEB00017CC6D /* TodoItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486B3352C2FBEB00017CC6D /* TodoItemViewModel.swift */; };
 		8486B3382C2FC1C50017CC6D /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486B3372C2FC1C50017CC6D /* TodoListView.swift */; };
+		848A9B6B2C4B474400C8B50E /* DefaultNetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A9B6A2C4B474400C8B50E /* DefaultNetworkingService.swift */; };
+		848A9B6D2C4B47EC00C8B50E /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A9B6C2C4B47EC00C8B50E /* NetworkingService.swift */; };
+		848A9B6F2C4B4B5400C8B50E /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A9B6E2C4B4B5400C8B50E /* NetworkingError.swift */; };
+		848A9B712C4B5EE600C8B50E /* TodoListSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A9B702C4B5EE600C8B50E /* TodoListSyncManager.swift */; };
 		84DE11922C38D3560068E468 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE11912C38D3560068E468 /* CalendarViewController.swift */; };
 		84DE11952C38D7700068E468 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 84DE11942C38D7700068E468 /* FSCalendar */; };
 		84DE11972C38DC5F0068E468 /* TodoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE11962C38DC5F0068E468 /* TodoItemCell.swift */; };
@@ -61,6 +65,10 @@
 		8486B3312C2FB1E20017CC6D /* AppTextStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextStyles.swift; sourceTree = "<group>"; };
 		8486B3352C2FBEB00017CC6D /* TodoItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemViewModel.swift; sourceTree = "<group>"; };
 		8486B3372C2FC1C50017CC6D /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
+		848A9B6A2C4B474400C8B50E /* DefaultNetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkingService.swift; sourceTree = "<group>"; };
+		848A9B6C2C4B47EC00C8B50E /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		848A9B6E2C4B4B5400C8B50E /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		848A9B702C4B5EE600C8B50E /* TodoListSyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListSyncManager.swift; sourceTree = "<group>"; };
 		84DE11912C38D3560068E468 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		84DE11962C38DC5F0068E468 /* TodoItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemCell.swift; sourceTree = "<group>"; };
 		84DE11982C38DC990068E468 /* CalendarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeaderView.swift; sourceTree = "<group>"; };
@@ -115,6 +123,17 @@
 			path = Style;
 			sourceTree = "<group>";
 		};
+		844FA4CD2C4B405E00A5DD84 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				848A9B6A2C4B474400C8B50E /* DefaultNetworkingService.swift */,
+				848A9B6C2C4B47EC00C8B50E /* NetworkingService.swift */,
+				848A9B6E2C4B4B5400C8B50E /* NetworkingError.swift */,
+				848A9B702C4B5EE600C8B50E /* TodoListSyncManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		847BBFA32C2664E000C66E07 = {
 			isa = PBXGroup;
 			children = (
@@ -138,7 +157,7 @@
 		847BBFAE2C2664E100C66E07 /* TodoApp */ = {
 			isa = PBXGroup;
 			children = (
-				84DE118C2C38BED40068E468 /* CalendarView */,
+				844FA4CD2C4B405E00A5DD84 /* Networking */,
 				8428F4402C30B4B1001C0DEE /* Style */,
 				8428F43A2C308BC8001C0DEE /* Assets.xcassets */,
 				84F083712C2F7E94002BCA56 /* Views */,
@@ -208,6 +227,7 @@
 		84F083712C2F7E94002BCA56 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				84DE118C2C38BED40068E468 /* CalendarView */,
 				8486B3372C2FC1C50017CC6D /* TodoListView.swift */,
 				847BBFB12C2664E100C66E07 /* ContentView.swift */,
 				847BBFAF2C2664E100C66E07 /* TodoApp.swift */,
@@ -408,12 +428,16 @@
 				847BBFE32C26667F00C66E07 /* TodoItem+CSV.swift in Sources */,
 				8486B3362C2FBEB00017CC6D /* TodoItemViewModel.swift in Sources */,
 				8486B3382C2FC1C50017CC6D /* TodoListView.swift in Sources */,
+				848A9B6B2C4B474400C8B50E /* DefaultNetworkingService.swift in Sources */,
 				8486B3322C2FB1E20017CC6D /* AppTextStyles.swift in Sources */,
 				847BBFB02C2664E100C66E07 /* TodoApp.swift in Sources */,
 				84DE11992C38DC990068E468 /* CalendarHeaderView.swift in Sources */,
+				848A9B6D2C4B47EC00C8B50E /* NetworkingService.swift in Sources */,
+				848A9B712C4B5EE600C8B50E /* TodoListSyncManager.swift in Sources */,
 				847BBFE92C2666C000C66E07 /* FileCache.swift in Sources */,
 				84FD9A362C4216F8001209BA /* URLSession+Extension.swift in Sources */,
 				84F083732C2F80A5002BCA56 /* NewTodoItemView.swift in Sources */,
+				848A9B6F2C4B4B5400C8B50E /* NetworkingError.swift in Sources */,
 				84DE11972C38DC5F0068E468 /* TodoItemCell.swift in Sources */,
 				847BBFE22C26667F00C66E07 /* TodoItem+JSON.swift in Sources */,
 			);

@@ -16,10 +16,11 @@ struct TodoItem: Identifiable, Codable {
     var creationDate: Date
     /// Дата изменения задачи (опционально)
     var modificationDate: Date?
+    var files: [String]?
     
     
     /// Инициализатор для создания нового элемента задачи
-    init(id: String = UUID().uuidString, text: String, importance: Importance = .normal, deadline: Date? = nil, isDone: Bool = false, creationDate: Date = Date(), modificationDate: Date? = nil) {
+    init(id: String = UUID().uuidString, text: String, importance: Importance = .normal, deadline: Date? = nil, isDone: Bool = false, creationDate: Date = Date(), modificationDate: Date? = nil, files: [String]? = nil) {
         self.id = id
         self.text = text
         self.importance = importance
@@ -27,6 +28,7 @@ struct TodoItem: Identifiable, Codable {
         self.isDone = isDone
         self.creationDate = creationDate
         self.modificationDate = modificationDate
+        self.files = files
     }
 }
 
