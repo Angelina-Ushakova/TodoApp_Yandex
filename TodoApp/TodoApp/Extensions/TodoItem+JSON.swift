@@ -8,7 +8,9 @@ extension TodoItem {
     static func parse(json: Any) -> TodoItem? {
         // Преобразуем входящий JSON в словарь [String: Any]
         guard let data = try? JSONSerialization.data(withJSONObject: json),
-              let dict = try? JSONSerialization.jsonObject(with: data) as? [String: Any] else { return nil }
+              let dict = try? JSONSerialization.jsonObject(with: data) as? [String: Any] else {
+            return nil
+        }
         
         // Извлекаем обязательные поля из словаря
         guard let id = dict["id"] as? String,
@@ -30,6 +32,9 @@ extension TodoItem {
         let modificationDateTimestamp = dict["modificationDate"] as? TimeInterval
         let modificationDate = modificationDateTimestamp != nil ? Date(timeIntervalSince1970: modificationDateTimestamp!) : nil
         
+        // Извлекаем массив файлов, если он существует
+        let files = dict["files"] as? [String]
+        
         return TodoItem(
             id: id,
             text: text,
@@ -37,7 +42,8 @@ extension TodoItem {
             deadline: deadline,
             isDone: isDone,
             creationDate: creationDate,
-            modificationDate: modificationDate
+            modificationDate: modificationDate,
+            files: files
         )
     }
     
@@ -66,7 +72,11 @@ extension TodoItem {
             dict["modificationDate"] = modificationDate.timeIntervalSince1970
         }
         
-        // Возвращаем словарь в качестве JSON-объекта
+        // Сохраняем файлы в словарь, если они есть
+        if let files = files {
+            dict["files"] = files
+        }
+        
         return dict
     }
 }
